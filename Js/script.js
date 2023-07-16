@@ -1,10 +1,11 @@
 viewAds = ()=>  {
     const showAds = document.getElementById("fb-ads")
     const changeColor = document.getElementById ("more")
+    const computedStyle = window.getComputedStyle(showAds)
 
 
     // This displays the content(fb-ads) when the user clicks on "more" 
-    if (showAds.style.display === "none") {
+    if (computedStyle.display === "none") {
 
         showAds.style.display = "block"
        
@@ -17,7 +18,7 @@ viewAds = ()=>  {
     
 
     // This changes the color of "more" when it's clicked
-    if (showAds.style.display === "block") {
+    if (computedStyle.display === "block") {
         
         changeColor.style.opacity = ".6"
 
@@ -25,23 +26,3 @@ viewAds = ()=>  {
         changeColor.style.opacity = "1"
     }
 };
-
-
-
-
-
-
-
-
-
-// const viewAds => () {
-// 	const show = getElementById ("fb-ads");
-	
-// 	if(show.style.display === "none") {
-// 	display: "block"
-// 	};
-	
-// 	else {
-// 	display: "none"
-// 	};
-// };
